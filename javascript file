@@ -1,11 +1,10 @@
-const els = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "!", "?", "$", "@"];
-let txt = "";
-
-function generate(password, length){
+function generate(id, length){
+    const els = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "!", "?", "$", "@"];
+    let txt = "";
     let  i;
-    while(password.length < length){
+    while(txt.length < length){
         let item = Math.floor((Math.random() * 64) + 1);
-        password += els[item];
+        txt += els[item];
     }
-    document.getElementById("output").innerHTML = password;
+    document.getElementById(id).innerHTML = txt;
 }
